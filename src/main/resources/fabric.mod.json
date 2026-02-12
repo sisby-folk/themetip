@@ -17,9 +17,6 @@
 	"entrypoints": {
 		"main": [
 			"gay.marie_the.themetip.Themetip"
-		],
-		"modmenu": [
-			"gay.marie_the.themetip.compat.ModMenuIntegration"
 		]
 	},
 	"mixins": [
@@ -27,9 +24,8 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.24",
-		"minecraft": "1.20.*",
-		"java": ">=17",
-		"yet_another_config_lib_v3": "*"
+		"minecraft": ">1.20.1",
+		"java": ">=17"
 	},
 	"custom": {
 		"modmenu": {
