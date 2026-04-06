@@ -30,12 +30,33 @@ public class TooltipBackgroundMixin {
 		return Themetip.CONFIG.thickEdges ? asColor(Themetip.CONFIG.backgroundColor) : 0;
 	}
 
-	@ModifyArg(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/tooltip/TooltipBackgroundRenderer;renderVerticalLine(Lnet/minecraft/client/gui/DrawContext;IIIII)V"), index = 5)
+	@ModifyArg(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/tooltip/TooltipBackgroundRenderer;renderVerticalLine(Lnet/minecraft/client/gui/DrawContext;IIIII)V"), index = 5, require = 0)
 	private static int background3(int x){
 		return Themetip.CONFIG.thickEdges ? asColor(Themetip.CONFIG.backgroundColor) : 0;
 	}
-	@ModifyArg(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/tooltip/TooltipBackgroundRenderer;renderVerticalLine(Lnet/minecraft/client/gui/DrawContext;IIIII)V", ordinal = 1), index = 5)
+
+	@ModifyArg(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/tooltip/TooltipBackgroundRenderer;renderVerticalLine(Lnet/minecraft/client/gui/DrawContext;IIIII)V", ordinal = 1), index = 5, require = 0)
 	private static int background4(int x){
+		return Themetip.CONFIG.thickEdges ? asColor(Themetip.CONFIG.backgroundColor) : 0;
+	}
+
+	@ModifyArg(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/tooltip/TooltipBackgroundRenderer;renderVerticalLine(Lnet/minecraft/client/gui/DrawContext;IIIIII)V"), index = 5, require = 0)
+	private static int background3Neo(int x){
+		return Themetip.CONFIG.thickEdges ? asColor(Themetip.CONFIG.backgroundColor) : 0;
+	}
+
+	@ModifyArg(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/tooltip/TooltipBackgroundRenderer;renderVerticalLine(Lnet/minecraft/client/gui/DrawContext;IIIIII)V", ordinal = 1), index = 5, require = 0)
+	private static int background4Neo(int x){
+		return Themetip.CONFIG.thickEdges ? asColor(Themetip.CONFIG.backgroundColor) : 0;
+	}
+
+	@ModifyArg(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/tooltip/TooltipBackgroundRenderer;renderVerticalLine(Lnet/minecraft/client/gui/DrawContext;IIIIII)V"), index = 6, require = 0)
+	private static int background3Neo2(int x){
+		return Themetip.CONFIG.thickEdges ? asColor(Themetip.CONFIG.backgroundColor) : 0;
+	}
+
+	@ModifyArg(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/tooltip/TooltipBackgroundRenderer;renderVerticalLine(Lnet/minecraft/client/gui/DrawContext;IIIIII)V", ordinal = 1), index = 6, require = 0)
+	private static int background4Neo2(int x){
 		return Themetip.CONFIG.thickEdges ? asColor(Themetip.CONFIG.backgroundColor) : 0;
 	}
 
